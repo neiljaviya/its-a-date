@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const yesBtn = document.getElementById('yes-btn');
     const noBtn = document.getElementById('no-btn');
-    const container = document.querySelector('.container');
+    const buttonContainer = document.querySelector('.button-container');
     const firstQuestion = document.getElementById('first-question');
     const secondQuestion = document.getElementById('second-question');
     const availabilityOptions = document.getElementById('availability-options');
@@ -11,25 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const activityNextBtn = document.getElementById('activity-next-btn');
     const finalMessage = document.getElementById('final-message');
 
-    // Initial positions
-    let initialYesBtnTop = yesBtn.offsetTop;
-    let initialYesBtnLeft = yesBtn.offsetLeft;
-    let initialNoBtnTop = noBtn.offsetTop;
-    let initialNoBtnLeft = noBtn.offsetLeft;
-
     // No button hover and click functionality
     noBtn.addEventListener('mouseover', switchButtons);
     noBtn.addEventListener('click', switchButtons);
 
     function switchButtons() {
-        let tempTop = yesBtn.offsetTop;
-        let tempLeft = yesBtn.offsetLeft;
-
-        yesBtn.style.top = noBtn.offsetTop + 'px';
-        yesBtn.style.left = noBtn.offsetLeft + 'px';
-
-        noBtn.style.top = tempTop + 'px';
-        noBtn.style.left = tempLeft + 'px';
+        buttonContainer.insertBefore(noBtn, yesBtn);
     }
 
     // Yes button functionality
