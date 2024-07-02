@@ -24,6 +24,8 @@ body {
 
 /* GIF Styles */
 .gif-container {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
