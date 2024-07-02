@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showGif('dead');
             alert('Seriously?');
         }
+        return;
     });
 
     // Activity next button functionality
