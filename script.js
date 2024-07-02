@@ -10,9 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const activityOptions = document.getElementById('activity-options');
     const activityNextBtn = document.getElementById('activity-next-btn');
     const finalMessage = document.getElementById('final-message');
+    const gifs = {
+        cute: document.getElementById('cute-gif'),
+        excited: document.getElementById('excited-gif'),
+        questioning: document.getElementById('questioning-gif'),
+        angry: document.getElementById('angry-gif'),
+        dead: document.getElementById('dead-gif')
+    };
 
     let availability = '';
 
+    function showGif(gif) {
+        for (let key in gifs) {
+            gifs[key].style.display = 'none';
+        }
+        gifs[gif].style.display = 'block';
+    }
+
+    // Initially show the cute gif
+    showGif('cute');
+    
     // No button hover and click functionality
     noBtn.addEventListener('mouseover', switchButtons);
     noBtn.addEventListener('click', switchButtons);
@@ -31,17 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Yes button functionality
     yesBtn.addEventListener('click', () => {
+        showGif('excited');
         firstQuestion.style.display = 'none';
         secondQuestion.style.display = 'block';
     });
 
     // Availability next button functionality
     availabilityNextBtn.addEventListener('click', () => {
-        availability = availabilitySelect.value;
+        if (['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
+            showGif('excited');
+        } else if (['September', 'October', 'November', 'December'].includes(availability)) {
+            showGif('questioning');
+        } else if (['2025', '2026', '2027', '2028', '2029', '2030'].includes(availability)) {
+            showGif('angry');
+        } else {
+            showGif('dead');
+        }
+
         if (!['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
             alert('Seriously?');
             return;
         }
+        
         secondQuestion.style.display = 'none';
         thirdQuestion.style.display = 'block';
     });
