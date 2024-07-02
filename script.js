@@ -65,7 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function sendEmail(availability, activities) {
-        // Use a service like EmailJS or an API to send the email
-        console.log('Sending email with:', availability, activities);
-    }
+    emailjs.send("your_service_id", "your_template_id", {
+        availability: availability,
+        activities: activities.join(', '),
+        to_name: 'Her Name',
+        from_name: 'Your Name',
+        to_email: 'her-email@example.com',
+        from_email: 'your-email@example.com'
+    }).then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+}
+
 });
