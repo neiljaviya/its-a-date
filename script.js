@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const activityOptions = document.getElementById('activity-options');
     const activityNextBtn = document.getElementById('activity-next-btn');
     const finalMessage = document.getElementById('final-message');
-    
+
     let availability = '';
-    
+
     // No button hover and click functionality
     noBtn.addEventListener('mouseover', switchButtons);
     noBtn.addEventListener('click', switchButtons);
