@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // No button hover and click functionality
     noBtn.addEventListener('mouseover', switchButtons);
     noBtn.addEventListener('click', switchButtons);
+    noBtn.addEventListener('touchend', switchButtons);
 
     function switchButtons() {
         const yesIndex = Array.prototype.indexOf.call(buttonContainer.children, yesBtn);
