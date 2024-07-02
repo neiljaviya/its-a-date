@@ -94,3 +94,13 @@ input[type=checkbox]:checked + label {
     color: white;
     border-color: transparent;
 }
+
+.site-footer .icon {
+	font-size: 20px;
+}
+
+.site-footer .love .icon {
+	font-size: 12px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
