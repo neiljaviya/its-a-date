@@ -38,17 +38,21 @@ body {
     margin-top: 20px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 button {
     padding: 10px 20px;
-    margin: 10px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     background-color: black;
     color: white;
-    transition: transform 0.2s, top 0.3s, left 0.3s;
-    position: relative;
+    transition: transform 0.2s;
 }
 
 button:hover {
@@ -71,11 +75,6 @@ input[type=checkbox] {
 label {
     margin-right: 10px;
     font-size: 16px;
-}
-
-/* Transition and Animation Styles */
-#yes-btn, #no-btn {
-    transition: all 0.3s ease;
 }
 
 /* Additional Styles for a Cleaner Look */
