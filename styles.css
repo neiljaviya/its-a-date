@@ -109,3 +109,21 @@ input[type=checkbox]:checked + label {
 .footer a:hover {
     text-decoration: underline;
 }
+
+#availability-select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+#availability-select:focus {
+    border-color: #ffafbd;
+    outline: none;
+}
+
