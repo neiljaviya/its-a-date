@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         excited: document.getElementById('excited-gif'),
         questioning: document.getElementById('questioning-gif'),
         angry: document.getElementById('angry-gif'),
-        dead: document.getElementById('dead-gif')
+        dead: document.getElementById('dead-gif'),
+        final: document.getElementById('final-gif')
     };
 
     let availability = '';
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         thirdQuestion.style.display = 'none';
         finalMessage.style.display = 'block';
+        showGif('final');
 
         // Send email (pseudo implementation)
         sendEmail(availability, selectedActivities);
