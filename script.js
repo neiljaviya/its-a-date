@@ -55,23 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Availability next button functionality
     availabilityNextBtn.addEventListener('click', () => {
-        if (!['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
-            alert('Seriously?');
-            return;
-            
+        availability = availabilitySelect.value;
+    
+        // Show appropriate gif based on availability
         if (['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
             showGif('excited');
+            secondQuestion.style.display = 'none';
+            thirdQuestion.style.display = 'block';
         } else if (['September', 'October', 'November', 'December'].includes(availability)) {
             showGif('questioning');
+            alert('Seriously?');
         } else if (['2025', '2026', '2027', '2028', '2029', '2030'].includes(availability)) {
             showGif('angry');
+            alert('Seriously?');
         } else {
             showGif('dead');
+            alert('Seriously?');
         }
-        }
-        
-        secondQuestion.style.display = 'none';
-        thirdQuestion.style.display = 'block';
     });
 
     // Activity next button functionality
