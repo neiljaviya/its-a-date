@@ -127,3 +127,32 @@ input[type=checkbox]:checked + label {
     outline: none;
 }
 
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .gif {
+        width: 150px;
+        height: 150px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #availability-select {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
