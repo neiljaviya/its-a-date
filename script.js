@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         activities: activities.join(', '),
     };
 
-    emailjs.send('service_kglqx7k', 'YOUR_TEMPLATE_ID', templateParams)
+    emailjs.send('service_kglqx7k', 'template_fpy829l', templateParams)
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
         }, (error) => {
