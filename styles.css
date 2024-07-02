@@ -79,6 +79,30 @@ label {
     font-size: 16px;
 }
 
+/* Hide default checkboxes */
+#activity-options input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the labels to look like buttons */
+#activity-options label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #ffafbd;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Highlight selected options */
+#activity-options input[type="checkbox"]:checked + label {
+    background-color: #ffafbd;
+    color: white;
+}
+
 /* Additional Styles for a Cleaner Look */
 input[type=checkbox] + label {
     cursor: pointer;
