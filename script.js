@@ -55,6 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Availability next button functionality
     availabilityNextBtn.addEventListener('click', () => {
+        if (!['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
+            alert('Seriously?');
+            return;
+            
         if (['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
             showGif('excited');
         } else if (['September', 'October', 'November', 'December'].includes(availability)) {
@@ -64,10 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             showGif('dead');
         }
-
-        if (!['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
-            alert('Seriously?');
-            return;
         }
         
         secondQuestion.style.display = 'none';
