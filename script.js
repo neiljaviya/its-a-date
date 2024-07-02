@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Availability next button functionality
     availabilityNextBtn.addEventListener('click', () => {
-        const availability = availabilitySelect.value;
+        availability = availabilitySelect.value;
         if (!['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
             alert('Seriously?');
             return;
