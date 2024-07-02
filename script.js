@@ -16,7 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     noBtn.addEventListener('click', switchButtons);
 
     function switchButtons() {
-        buttonContainer.insertBefore(noBtn, yesBtn);
+        const yesIndex = Array.prototype.indexOf.call(buttonContainer.children, yesBtn);
+        const noIndex = Array.prototype.indexOf.call(buttonContainer.children, noBtn);
+        
+        if (yesIndex < noIndex) {
+            buttonContainer.insertBefore(noBtn, yesBtn);
+        } else {
+            buttonContainer.insertBefore(yesBtn, noBtn.nextSibling);
+        }
     }
 
     // Yes button functionality
@@ -45,20 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
     activityNextBtn.addEventListener('click', () => {
         const selectedActivities = Array.from(document.querySelectorAll('input[name="activity"]:checked'))
                                         .map(cb => cb.value);
-        if (selectedActivities.length === 0 || selectedActivities.length > 2) {
-            alert('Please select up to 2 activities.');
-            return;
-        }
-        thirdQuestion.style.display = 'none';
-        activityOptions.style.display = 'none';
-        finalMessage.style.display = 'block';
-
-        // Send email (pseudo implementation)
-        sendEmail(availability, selectedActivities);
-    });
-
-    function sendEmail(availability, activities) {
-        // Use a service like EmailJS or an API to send the email
-        console.log('Sending email with:', availability, activities);
-    }
-});
+        if (selectedActivities.length === 0 || selected
