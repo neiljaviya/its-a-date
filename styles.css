@@ -95,8 +95,3 @@ input[type=checkbox]:checked + label {
     border-color: transparent;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
