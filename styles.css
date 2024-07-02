@@ -19,6 +19,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
+    position: relative;
 }
 
 /* GIF Styles */
@@ -46,7 +47,8 @@ button {
     border-radius: 5px;
     background-color: black;
     color: white;
-    transition: transform 0.2s;
+    transition: transform 0.2s, top 0.3s, left 0.3s;
+    position: relative;
 }
 
 button:hover {
