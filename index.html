@@ -3,34 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask for a Date</title>
+    <title>Date Invitation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="gif-container">
-            <img src="your-gif-url-here" alt="Loading..." class="gif">
+            <img src="https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif" alt="GIF" class="gif">
         </div>
-        <div class="question" id="first-question">
-            Would you go out with me on a date someday??
+        <div id="first-question" class="question">
+            <p>Would you go out with me on a date someday??</p>
+            <div class="button-container">
+                <button id="yes-btn">Yes</button>
+                <button id="no-btn">No</button>
+            </div>
         </div>
-        <div class="buttons">
-            <button id="yes-btn">Yes</button>
-            <button id="no-btn">No</button>
-        </div>
-        <div class="question" id="second-question" style="display: none;">
-            When are you available??
-        </div>
-        <div class="options" id="availability-options" style="display: none;">
+        <div id="second-question" class="question" style="display:none;">
+            <p>When are you available??</p>
             <select id="availability-select">
                 <option value="this-week">Sometime this week</option>
                 <option value="next-week">Sometime next week</option>
                 <option value="next-to-next-week">Sometime next to next week</option>
                 <option value="next-month">Next month</option>
-                <option value="september">September</option>
-                <option value="october">October</option>
-                <option value="november">November</option>
-                <option value="december">December</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
                 <option value="2025">2025</option>
                 <option value="2026">2026</option>
                 <option value="2027">2027</option>
@@ -47,29 +45,29 @@
             </select>
             <button id="availability-next-btn">Next</button>
         </div>
-        <div class="question" id="third-question" style="display: none;">
-            What activity do you think we should do?
-        </div>
-        <div class="options" id="activity-options" style="display: none;">
-            <input type="checkbox" id="brunch" name="activity" value="Brunch">
-            <label for="brunch">Brunch</label><br>
-            <input type="checkbox" id="lunch" name="activity" value="Lunch">
-            <label for="lunch">Lunch</label><br>
-            <input type="checkbox" id="dinner" name="activity" value="Dinner">
-            <label for="dinner">Dinner</label><br>
-            <input type="checkbox" id="park" name="activity" value="Park/Trail/Hike">
-            <label for="park">Park/Trail/Hike</label><br>
-            <input type="checkbox" id="beach" name="activity" value="Beach/Harbour Front">
-            <label for="beach">Beach/Harbour Front</label><br>
-            <input type="checkbox" id="something-else" name="activity" value="Something Else">
-            <label for="something-else">Something Else</label><br>
-            <input type="checkbox" id="surprise" name="activity" value="Surprise me!">
-            <label for="surprise">Surprise me!</label><br>
+        <div id="third-question" class="question" style="display:none;">
+            <p>What activity you think we should do?</p>
+            <div id="activity-options">
+                <input type="checkbox" id="brunch" name="activity" value="Brunch">
+                <label for="brunch">Brunch</label>
+                <input type="checkbox" id="lunch" name="activity" value="Lunch">
+                <label for="lunch">Lunch</label>
+                <input type="checkbox" id="dinner" name="activity" value="Dinner">
+                <label for="dinner">Dinner</label>
+                <input type="checkbox" id="park" name="activity" value="Park/Trail/Hike">
+                <label for="park">Park/Trail/Hike</label>
+                <input type="checkbox" id="beach" name="activity" value="Beach/Harbour Front">
+                <label for="beach">Beach/Harbour Front</label>
+                <input type="checkbox" id="something-else" name="activity" value="Something Else">
+                <label for="something-else">Something Else</label>
+                <input type="checkbox" id="surprise-me" name="activity" value="Surprise me!">
+                <label for="surprise-me">Surprise me!</label>
+            </div>
             <button id="activity-next-btn">Next</button>
         </div>
-        <div class="final-message" id="final-message" style="display: none;">
-            <img src="your-final-gif-url-here" alt="Yay!" class="gif">
-            <div>Yay! Then It’s a date!</div>
+        <div id="final-message" class="final-message" style="display:none;">
+            <p>Yay! Then It’s a date!</p>
+            <img src="https://media.giphy.com/media/l0HlI2p3uPrQbLXIs/giphy.gif" alt="GIF" class="gif">
         </div>
     </div>
     <script src="script.js"></script>
