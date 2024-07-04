@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function sendEmail(availability, activities) {
     const templateParams = {
-        to_name: 'Neil',
-        to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
+        to_name: 'Saumya',
+        to_email: 'neiljaviya4@gmail.com, saumyapandya2601@gmail.com', // replace with the recipient's email
         availability: availability,
         activities: activities.join(', '),
     };
