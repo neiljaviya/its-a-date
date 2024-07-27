@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentYear = currentDate.getFullYear();
         const currentMonth = currentDate.getMonth();
         const currentDay = currentDate.getDate();
+        const endYear = currentYear + 40;
 
         const weeks = [
             'Sometime this week',
@@ -98,8 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
             option.textContent = i.toString();
             availabilitySelect.appendChild(option);
         }
-
-        const endYear = currentYear + 40;
 
         for (let i = Math.ceil(currentYear / 10) * 10; i < endYear; i += 10) {
             const option = document.createElement('option');
