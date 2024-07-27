@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const activityOptions = document.getElementById('activity-options');
     const activityNextBtn = document.getElementById('activity-next-btn');
     const finalMessage = document.getElementById('final-message');
-    const confirmationScreen = document.getElementById('confirmation-screen');
     const confirmAvailability = document.getElementById('confirm-availability');
     const confirmActivities = document.getElementById('confirm-activities');
     const gifs = {
@@ -148,9 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
         finalMessage.style.display = 'block';
         showGif('final');
 
-        //confirmAvailability.textContent = availability;
-        //confirmActivities.textContent = selectedActivities.join(', ');
-        //confirmationScreen.style.display = 'block';
+        confirmAvailability.textContent = availability;
+        confirmActivities.textContent = selectedActivities.join(', ');
         
         // Send email (pseudo implementation)
         sendEmail(availability, selectedActivities);
