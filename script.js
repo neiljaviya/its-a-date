@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const activityOptions = document.getElementById('activity-options');
     const activityNextBtn = document.getElementById('activity-next-btn');
     const finalMessage = document.getElementById('final-message');
+    const confirmationScreen = document.getElementById('confirmation-screen');
+    const confirmAvailability = document.getElementById('confirm-availability');
+    const confirmActivities = document.getElementById('confirm-activities');
     const gifs = {
         cute: document.getElementById('cute-gif'),
         excited: document.getElementById('excited-gif'),
