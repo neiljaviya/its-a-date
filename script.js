@@ -100,8 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         for (let i = currentYear+; i < currentYear + 6; i++) {
-            const currentYear = new Date().getFullYear();
-            const endYear = currentYear + 100; // You can adjust the range as needed
+            const endYear = currentYear + 40;
 
             for (let i = Math.ceil(currentYear / 10) * 10; i < endYear; i += 10) {
                 const option = document.createElement('option');
