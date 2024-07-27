@@ -54,6 +54,55 @@ document.addEventListener('DOMContentLoaded', () => {
         secondQuestion.style.display = 'block';
     });
 
+    // Function to generate dynamic dropdown options
+    function generateDropdownOptions() {
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        const currentMonth = currentDate.getMonth();
+        const currentDay = currentDate.getDate();
+
+        const weeks = [
+            'Sometime this week',
+            'Sometime next week',
+            'Sometime next to next week',
+            'Next month'
+        ];
+
+        const months = [
+            'January', 'February', 'March', 'April',
+            'May', 'June', 'July', 'August',
+            'September', 'October', 'November', 'December'
+        ];
+
+        // Add options for the next few weeks
+        weeks.forEach(week => {
+            const option = document.createElement('option');
+            option.value = week.toLowerCase().replace(/ /g, '-');
+            option.textContent = week;
+            availabilitySelect.appendChild(option);
+        });
+
+        // Add options for the next few months
+        for (let i = currentMonth; i < currentMonth + 4; i++) {
+            const monthIndex = i % 12;
+            const option = document.createElement('option');
+            option.value = months[monthIndex];
+            option.textContent = months[monthIndex];
+            availabilitySelect.appendChild(option);
+        }
+
+        // Add options for the next 10 years
+        for (let i = currentYear; i < currentYear + 10; i++) {
+            const option = document.createElement('option');
+            option.value = i.toString();
+            option.textContent = i.toString();
+            availabilitySelect.appendChild(option);
+        }
+    }
+
+    // Call the function to generate dynamic dropdown options
+    generateDropdownOptions();
+    
     // Availability next button functionality
     availabilityNextBtn.addEventListener('click', () => {
         availability = availabilitySelect.value;
@@ -95,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function sendEmail(availability, activities) {
     const templateParams = {
-        to_name: 'Saumya',
+        to_name: 'Mrinalini',
         to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
         availability: availability,
         activities: activities.join(', '),
