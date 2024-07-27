@@ -234,4 +234,23 @@ input[type=checkbox]:checked + label {
     .footer {
         font-size: 12px;
     }
+
+    .final-message .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .final-message .header h1 {
+        font-size: 20px;
+    }
+
+    .final-message .content,
+    .final-message .regards {
+        font-size: 14px;
+    }
+
+    .gif-container .gif {
+        width: 120px;
+        height: 120px;
+    }
 }
