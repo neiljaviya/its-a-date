@@ -148,9 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
         finalMessage.style.display = 'block';
         showGif('final');
 
-        confirmAvailability.textContent = availability;
-        confirmActivities.textContent = selectedActivities.join(', ');
-        confirmationScreen.style.display = 'block';
+        //confirmAvailability.textContent = availability;
+        //confirmActivities.textContent = selectedActivities.join(', ');
+        //confirmationScreen.style.display = 'block';
         
         // Send email (pseudo implementation)
         sendEmail(availability, selectedActivities);
