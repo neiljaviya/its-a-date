@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Availability next button functionality
     availabilityNextBtn.addEventListener('click', () => {
-        availability = availabilitySelect.textContent;
+        availability = availabilitySelect.value;
 
         // Show appropriate gif based on availability
-        if (['Sometime this week', 'Sometime next week', 'Sometime next to next week', 'Next month'].includes(availability)) {
+        if (['sometime-this-week', 'sometime-next-week', 'sometime-next-to-next-week', 'next-month'].includes(availability)) {
             showGif('excited');
             secondQuestion.style.display = 'none';
             thirdQuestion.style.display = 'block';
