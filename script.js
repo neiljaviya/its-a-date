@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sendEmail(availability, selectedActivities);
     });
 
-    function sendEmail(availability, activities) {
+    /*function sendEmail(availability, activities) {
         const templateParams = {
             to_name: 'Mrinalini',
             to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, (error) => {
                 console.log('FAILED...', error);
             });
-    }
+    }*/
     
     // Function to get random alert message
     function getRandomAlertMessage() {
