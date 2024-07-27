@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Add options for the next few months
-        for (let i = currentMonth; i < currentMonth + 4; i++) {
+        for (let i = currentMonth + 2; i < currentMonth + 6; i++) {
             const monthIndex = i % 12;
             const option = document.createElement('option');
             option.value = months[monthIndex];
@@ -92,14 +92,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Add options for the next 10 years
-        for (let i = currentYear; i < currentYear + 10; i++) {
+        for (let i = currentYear+1; i < currentYear + 6; i++) {
             const option = document.createElement('option');
             option.value = i.toString();
             option.textContent = i.toString();
             availabilitySelect.appendChild(option);
         }
-    }
 
+        for (let i = currentYear+; i < currentYear + 6; i++) {
+            const currentYear = new Date().getFullYear();
+            const endYear = currentYear + 100; // You can adjust the range as needed
+
+            for (let i = Math.ceil(currentYear / 10) * 10; i < endYear; i += 10) {
+                const option = document.createElement('option');
+                option.value = `${i}-${i + 9}`;
+                option.textContent = `${i}-${i + 9}`;
+                availabilitySelect.appendChild(option);
+            }
+        }
+    }
+    
     // Call the function to generate dynamic dropdown options
     generateDropdownOptions();
 
