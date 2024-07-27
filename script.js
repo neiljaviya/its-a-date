@@ -141,6 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Please select up to 3 activities.');
             return;
         }
+        confirmAvailability.textContent = availability;
+        confirmActivities.textContent = selectedActivities.join(', ');
+        confirmationScreen.style.display = 'block';
         thirdQuestion.style.display = 'none';
         finalMessage.style.display = 'block';
         showGif('final');
