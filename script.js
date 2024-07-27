@@ -99,15 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
             availabilitySelect.appendChild(option);
         }
 
-        for (let i = currentYear+; i < currentYear + 6; i++) {
-            const endYear = currentYear + 40;
+        const endYear = currentYear + 40;
 
-            for (let i = Math.ceil(currentYear / 10) * 10; i < endYear; i += 10) {
-                const option = document.createElement('option');
-                option.value = `${i}-${i + 9}`;
-                option.textContent = `${i}-${i + 9}`;
-                availabilitySelect.appendChild(option);
-            }
+        for (let i = Math.ceil(currentYear / 10) * 10; i < endYear; i += 10) {
+            const option = document.createElement('option');
+            option.value = `${i}-${i + 9}`;
+            option.textContent = `${i}-${i + 9}`;
+            availabilitySelect.appendChild(option);
         }
     }
     
