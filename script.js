@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
     activityNextBtn.addEventListener('click', () => {
         const selectedActivities = Array.from(document.querySelectorAll('input[name="activity"]:checked'))
                                         .map(cb => cb.value);
-        if (selectedActivities.length === 0 || selectedActivities.length > 2) {
-            alert('Please select up to 2 activities.');
+        if (selectedActivities.length === 0 || selectedActivities.length > 3) {
+            alert('Please select up to 3 activities.');
             return;
         }
         thirdQuestion.style.display = 'none';
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function sendEmail(availability, activities) {
         const templateParams = {
-            to_name: 'Saumya',
+            to_name: 'Mrinalini',
             to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
             availability: availability,
             activities: activities.join(', '),
