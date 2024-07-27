@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initially show the cute gif
     showGif('cute');
-    
+
     // No button hover and click functionality
     noBtn.addEventListener('mouseover', switchButtons);
     noBtn.addEventListener('click', switchButtons);
@@ -102,25 +102,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Call the function to generate dynamic dropdown options
     generateDropdownOptions();
-    
+
     // Availability next button functionality
     availabilityNextBtn.addEventListener('click', () => {
         availability = availabilitySelect.value;
-    
+
         // Show appropriate gif based on availability
-        if (['this-week', 'next-week', 'next-to-next-week', 'next-month'].includes(availability)) {
+        if (['sometime-this-week', 'sometime-next-week', 'sometime-next-to-next-week', 'next-month'].includes(availability)) {
             showGif('excited');
             secondQuestion.style.display = 'none';
             thirdQuestion.style.display = 'block';
-        } else if (['September', 'October', 'November', 'December'].includes(availability)) {
+        } else if (['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'].includes(availability)) {
             showGif('questioning');
-            alert('Seriously?');
-        } else if (['2025', '2026', '2027', '2028', '2029', '2030'].includes(availability)) {
+            alert(getRandomAlertMessage());
+        } else if (['2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033'].includes(availability)) {
             showGif('angry');
-            alert('Seriously?');
+            alert(getRandomAlertMessage());
         } else {
             showGif('dead');
-            alert('Seriously?');
+            alert(getRandomAlertMessage());
         }
         return;
     });
@@ -141,20 +141,33 @@ document.addEventListener('DOMContentLoaded', () => {
         sendEmail(availability, selectedActivities);
     });
 
-    
     function sendEmail(availability, activities) {
-    const templateParams = {
-        to_name: 'Mrinalini',
-        to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
-        availability: availability,
-        activities: activities.join(', '),
-    };
+        const templateParams = {
+            to_name: 'Saumya',
+            to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
+            availability: availability,
+            activities: activities.join(', '),
+        };
 
-    emailjs.send('service_kglqx7k', 'template_fpy829l', templateParams)
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-        }, (error) => {
-            console.log('FAILED...', error);
-        });
-}
+        emailjs.send('service_kglqx7k', 'template_fpy829l', templateParams)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+    }
+    
+    // Function to get random alert message
+    function getRandomAlertMessage() {
+        const messages = [
+            'Seriously?',
+            'Come on, don\'t be ruthless!',
+            'Have some mercy!',
+            'Are you kidding me?',
+            'Be realistic!',
+            'Think again!',
+            'You must be joking!'
+        ];
+        return messages[Math.floor(Math.random() * messages.length)];
+    }
 });
