@@ -156,13 +156,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function sendEmail(availability, activities) {
         const templateParams = {
-            to_name: 'Mrinalini',
+            to_name: 'Dear',
             to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
             availability: availability,
             activities: activities.join(', '),
         };
 
-        emailjs.send('service_kglqx7k', 'template_fpy829l', templateParams)
+        emailjs.send('service_kglqx7k', 'template_fpy829l', templateParams) //replace both parameters with your personal values from emailjs
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
             }, (error) => {
