@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function sendEmail(availability, activities) {
         const templateParams = {
-            to_name: 'Dear',
+            to_name: 'Dear Nityakshi',
             to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
             availability: availability,
             activities: activities.join(', '),
@@ -184,3 +184,4 @@ document.addEventListener('DOMContentLoaded', () => {
         return messages[Math.floor(Math.random() * messages.length)];
     }
 });
+
