@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             activities: activities.join(', '),
         };
 
-        emailjs.send('service_kglqx7k', 'template_fpy829l', templateParams) //replace both parameters with your personal values from emailjs
+        emailjs.send('service_dgylwbm', 'template_fpy829l', templateParams) //replace both parameters with your personal values from emailjs
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
             }, (error) => {
@@ -184,4 +184,5 @@ document.addEventListener('DOMContentLoaded', () => {
         return messages[Math.floor(Math.random() * messages.length)];
     }
 });
+
 
