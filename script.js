@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     activityNextBtn.addEventListener('click', () => {
         const selectedActivities = Array.from(document.querySelectorAll('input[name="activity"]:checked'))
                                         .map(cb => cb.value);
-        if (selectedActivities.length === 0 || selectedActivities.length > 2) {
+        if (selectedActivities.length === 0 || selectedActivities.length < 2) {
             alert('Please select up to 2 activities.');
             return;
         }
@@ -189,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return messages[Math.floor(Math.random() * messages.length)];
     }
 });
+
 
 
 
