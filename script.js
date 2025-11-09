@@ -65,9 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const endYear = currentYear + 40;
 
         const weeks = [
-            'Sometime this week',
+            /*'Sometime this week',
             'Sometime next week',
             'Sometime next to next week',
+            'Next month'*/
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
             'Next month'
         ];
 
@@ -118,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         availability = availabilitySelect.value;
 
         // Show appropriate gif based on availability
-        if (['sometime-this-week', 'sometime-next-week', 'sometime-next-to-next-week', 'next-month'].includes(availability)) {
+        if (['sometime-this-week', 'sometime-next-week', 'sometime-next-to-next-week', 'next-month', 'monday', 'tuesday', 'wednesday', 'thursday', 'next-month'].includes(availability)) {
             showGif('excited');
             secondQuestion.style.display = 'none';
             thirdQuestion.style.display = 'block';
@@ -139,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
     activityNextBtn.addEventListener('click', () => {
         const selectedActivities = Array.from(document.querySelectorAll('input[name="activity"]:checked'))
                                         .map(cb => cb.value);
-        if (selectedActivities.length === 0 || selectedActivities.length > 3) {
-            alert('Please select up to 3 activities.');
+        if (selectedActivities.length === 0 || selectedActivities.length > 2) {
+            alert('Please select up to 2 activities.');
             return;
         }
         thirdQuestion.style.display = 'none';
@@ -156,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function sendEmail(availability, activities) {
         const templateParams = {
-            to_name: 'Dear Rushali',
+            to_name: 'Dear Abhisha',
             to_email: 'neiljaviya4@gmail.com', // replace with the recipient's email
             availability: availability,
             activities: activities.join(', '),
@@ -184,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return messages[Math.floor(Math.random() * messages.length)];
     }
 });
+
 
 
 
